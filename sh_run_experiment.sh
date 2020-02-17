@@ -2,18 +2,18 @@
 
 gpu=0
 
-TYPE=cnn	# cnn, dann
+TYPE=dann		# cnn, dann
 
-model=1         # 1, 2, 3, 4, 21, 22
+model=1          # 1, 2, 3, 4, 21, 22
 db=mnist        # mnist  signs
-select=None     # none  |||  mnist, mnist_m, svhn, syn_numbers, usps   |||   gtsrb, syn_signs
+select=none     # none  |||  mnist, mnist_m, svhn, syn_numbers   |||   gtsrb, syn_signs
 from_db=none
 to_db=none
-norm=255        # 255 mean standard
+norm=255        	# 255 mean standard
 e=200
-b=128   	# 64 128 256
+b=128   			# 64 128 256
 #lr1=1.0
-options=""  # --tsne --truncate --v  -size 40
+options=""  	# --tsne --truncate --v  -size 40
 
 
 python -u dann.py -type ${TYPE} \
