@@ -1,0 +1,14 @@
+.vscode/*
+BACKUP
+datasets*
+OTHER*
+WEIGHTS*
+RESULTS*
+model_*
+log*
+bib_*
+fig_*
+out_*
+*.out
+*.pyc
+*~
