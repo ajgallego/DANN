@@ -16,7 +16,7 @@ def init():
     sys.setrecursionlimit(40000)
     random.seed(42)                             # For reproducibility
     np.random.seed(42)
-    tf.set_random_seed(42)
+    tf.compat.v1.set_random_seed(42)
 
 
 # ----------------------------------------------------------------------------

@@ -80,7 +80,6 @@ class DANNModel(object):
         label_model = Model(input=self.clsModel.input, output=branch_label)
         tsne_model = Model(input=self.clsModel.input, output=branch_features)
 
-        if config.v == True:
-            print(dann_model.summary())
+        #print(dann_model.summary())
 
         return dann_model, label_model, tsne_model

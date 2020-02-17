@@ -12,7 +12,7 @@ from tensorflow.examples.tutorials.mnist import input_data
 import warnings
 warnings.filterwarnings('ignore')
 
-ARRAY_BD_NAMES = ['mnist', 'mnist_m', 'svhn', 'syn_numbers'] #, 'usps']
+ARRAY_BD_NAMES = ['mnist', 'mnist_m', 'svhn', 'syn_numbers']
 
 VERBOSE_NB_SHOW = 20
 
@@ -158,44 +158,6 @@ def __load_dataset_syn_numbers(img_size, verbose):
     #print(np.min(y_train), np.max(y_train), np.min(y_test), np.max(y_test))
     #y_train[y_train == 10] = 0
     #y_test[y_test == 10] = 0
-    y_train = np_utils.to_categorical(y_train, num_classes=10)
-    y_test = np_utils.to_categorical(y_test, num_classes=10)
-
-    return x_train, y_train, x_test, y_test
-
-
-# ----------------------------------------------------------------------------
-# https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/multiclass.html#usps
-def __load_dataset_usps(verbose):
-    path = 'datasets/USPS'
-    x_train, y_train = load_svmlight_file(os.path.join(path, 'usps.train.libsvm'))
-    x_test, y_test = load_svmlight_file(os.path.join(path, 'usps.test.libsvm'))
-
-    x_train = np.array( x_train.todense() )
-    x_test = np.array( x_test.todense() )
-
-    x_train = cv2.normalize(x_train, x_train, alpha=0, beta=255,norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_8U)
-    x_test = cv2.normalize(x_test, x_test, alpha=0, beta=255,norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_8U)
-
-    x_train = x_train.reshape(x_train.shape[0], 16, 16, 1)
-    x_test = x_test.reshape(x_test.shape[0], 16, 16, 1)
-
-    x_train = np.concatenate([x_train, x_train, x_train], 3)
-    x_test = np.concatenate([x_test, x_test, x_test], 3)
-
-    x_train = __resize_array_images(x_train, 28)
-    x_test = __resize_array_images(x_test, 28)
-
-    y_train = np.array( y_train ).astype(np.int32) - 1
-    y_test = np.array( y_test ).astype(np.int32) - 1
-
-    if verbose:
-        print('y', np.min(y_train), np.max(y_train))
-        for i in np.random.choice(len(x_train), VERBOSE_NB_SHOW, replace=False):
-            print('Label:', y_train[i])
-            cv2.imshow("mat", x_train[i])
-            cv2.waitKey(0)
-
     y_train = np_utils.to_categorical(y_train, num_classes=10)
     y_test = np_utils.to_categorical(y_test, num_classes=10)
 
