@@ -62,7 +62,7 @@ def __load_dataset_mnist(img_size, verbose):
 # MNIST-M
 def __load_dataset_mnist_m(img_size, verbose):
     path = 'datasets/dataset_target_mnist_data.pkl'
-    mnistm_mnist = pkl.load(open(path, 'rb'))
+    mnistm_mnist = pkl.load(open(path, 'rb'), encoding='latin1')
 
     x_train = mnistm_mnist['x_train']
     y_train = mnistm_mnist['y_train']
