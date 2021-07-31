@@ -138,7 +138,7 @@ python-gnupg==0.4.1
 pytz==2018.4
 PyWavelets==0.5.2
 pyxdg==0.25
-PyYAML==3.13
+PyYAML==5.4
 pyzmq==17.1.2
 QtAwesome==0.4.4
 qtconsole==4.4.3
