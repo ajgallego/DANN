@@ -181,7 +181,7 @@ tqdm==4.32.2
 traitlets==4.3.2
 typing==3.6.4
 unity-lens-photos==1.0
-urllib3==1.22
+urllib3==1.26.5
 uTidylib==0.3
 wcwidth==0.1.7
 webencodings==0.5.1
