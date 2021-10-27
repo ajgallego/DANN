@@ -31,7 +31,7 @@ cssselect==1.0.3
 cssutils==1.0.2
 cycler==0.10.0
 Cython==0.29.12
-dask==1.2.2
+dask==2021.10.0
 decorator==4.3.0
 defusedxml==0.5.0
 dnspython==1.15.0
