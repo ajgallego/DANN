@@ -101,7 +101,7 @@ nbconvert==5.4.0
 nbformat==4.4.0
 netifaces==0.10.4
 networkx==2.1
-notebook==6.4.1
+notebook==6.4.12
 numpy==1.15.2
 numpydoc==0.7.0
 olefile==0.46
