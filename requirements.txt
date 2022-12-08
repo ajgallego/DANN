@@ -18,7 +18,7 @@ botocore==1.10.25
 bz2file==0.98
 catkin-pkg==0.4.8
 ccsm==0.9.13.1
-certifi==2018.4.16
+certifi==2022.12.7
 cffi==1.12.3
 chardet==3.0.4
 CherryPy==8.9.1
