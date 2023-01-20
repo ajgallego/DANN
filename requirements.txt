@@ -89,7 +89,7 @@ Markdown==3.0.1
 MarkupSafe==1.1.0
 matplotlib==2.2.2
 mccabe==0.6.1
-mechanize==0.2.5
+mechanize==0.4.6
 mercurial==4.6.1
 mistune==0.8.4
 mock==2.0.0
